@@ -1,0 +1,10 @@
+{
+  "_version": "1.12.0",
+  "sap.app": {
+    "id": "mo360",
+    "type": "application",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  }
+}
