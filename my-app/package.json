@@ -20,7 +20,7 @@
     "start": "webpack-dev-server --env.build=dev",
     "start:swidget": "webpack-dev-server --port 7070 --env.build=dev --env.swidget=true",
     "start:host": "webpack-dev-server --env.build=dev --env.exposed=true",
-    "build": "npm run clean && webpack --env.build=prod",
+    "build": "npm run clean && webpack --env.build=prod  && npm run manifest && npm run zip",
     "build:ci": "npm run clean && webpack --env.build=prod --env.verbose=true",
     "build:host": "npm run clean && webpack --env.build=prod --env.exposed=true",
     "build:swidget": "npm run clean && webpack --env.build=prod --env.swidget=true",
@@ -34,7 +34,9 @@
     "lint:fix:postcss": "postcss --config postcss.config.js --env sort-only --no-map --replace \"src/**/*.(css|scss)\"",
     "lint:fix:stylelint": "stylelint \"src/**/*.(css|scss)\" --syntax scss --fix --allow-empty-input",
     "lint:fix:eslint": "eslint --fix --ext ts,tsx src",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "manifest": "cp src/assets/manifest.json dist/app/ && cp src/assets/xs-app.json dist/app/",
+    "zip": "rimraf resources && mkdir resources && cd dist && cd app && npx bestzip ../../resources/mo360-content.zip *"
   },
   "husky": {
     "hooks": {
@@ -128,6 +130,7 @@
     "webpack-cli": "~3.3.7",
     "webpack-dev-server": "~3.11.0",
     "webpack-merge": "~4.2.2",
-    "webpack": "~4.39.3"
+    "webpack": "~4.39.3",
+    "bestzip": "2.1.4"
   }
 }
