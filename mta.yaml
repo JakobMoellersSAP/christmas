@@ -6,15 +6,15 @@ modules:
   type: approuter.nodejs
   path: test-approuter
   requires:
-  - name: test_html_repo_runtime
+  - name: mo360_html_repo_runtime
   parameters:
     disk-quota: 256M
     memory: 256M
 - name: test_ui_deployer
   type: com.sap.application.content
-  path: .
+  path: my-app
   requires:
-  - name: test_html_repo_host
+  - name: mo360_html_repo_host
     parameters:
       content-target: true
   build-parameters:
