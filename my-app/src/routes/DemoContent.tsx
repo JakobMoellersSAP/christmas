@@ -26,8 +26,6 @@ import {
 } from '@material-ui/core';
 import { I18nService, inject, withInject, RouterService } from '@daimler/ftk-core';
 import * as React from 'react';
-import Logo from '../assets/images/logo.png';
-import LogoGithub from '../assets/images/github-logo.png';
 import SAP from '../assets/images/sap.png';
 import Daimler from '../assets/images/daimler.png';
 
