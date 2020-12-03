@@ -28,6 +28,8 @@ import { I18nService, inject, withInject, RouterService } from '@daimler/ftk-cor
 import * as React from 'react';
 import Logo from '../assets/images/logo.png';
 import LogoGithub from '../assets/images/github-logo.png';
+import SAP from '../assets/images/sap.png';
+import Daimler from '../assets/images/daimler.png';
 
 const DemoRouteStyles = () =>
   createStyles({
@@ -76,13 +78,13 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
           <Grid item xs={12} md={6}>
             <Card className={classes.card}>
               <CardActionArea
-                href="https://github.com/Daimler/mo360-ftk/tree/master/docs"
+                href="https://github.com/Daimler/mo360-ftk"
                 target="_blank"
                 className={classes.cardAction}
               >
-                <CardMedia className={classes.media} component="img" image={Logo} />
+                <CardMedia className={classes.media} component="img" image={Daimler} />
                 <CardContent className={classes.cardContent}>
-                  <Typography variant="h6">Documentation</Typography>
+                  <Typography variant="h6">Sources @ GitHub</Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
@@ -90,13 +92,13 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
           <Grid item xs={12} md={6}>
             <Card className={classes.card}>
               <CardActionArea
-                href="https://github.com/Daimler/mo360-ftk"
+                href="https://www.sap.com/products/cloud-platform.html"
                 target="_blank"
                 className={classes.cardAction}
               >
-                <CardMedia className={classes.media} component="img" image={LogoGithub} />
+                <CardMedia className={classes.media} component="img" image={SAP} />
                 <CardContent className={classes.cardContent}>
-                  <Typography variant="h6">Sources @ GitHub</Typography>
+                  <Typography variant="h6">SAP Cloud Platform</Typography>
                 </CardContent>
               </CardActionArea>
             </Card>

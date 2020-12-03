@@ -10,7 +10,7 @@ const useStyles = makeStyles(({ spacing }) => ({
     margin: `${spacing(2)}px ${spacing(5)}px ${spacing(5)}px ${spacing(5)}px`,
     textAlign: 'center',
     '& img': {
-      maxWidth: '200px',
+      maxWidth: '80%',
     },
     '&:hover': {
       opacity: 0.9,
