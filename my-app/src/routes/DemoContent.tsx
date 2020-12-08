@@ -101,6 +101,19 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
               </CardActionArea>
             </Card>
           </Grid>
+          <Grid item xs={12} md={6}>
+            <Card className={classes.card}>
+              <CardActionArea
+                onClick={() => this.router.navigate(this.router.linkTo('table'))}
+                className={classes.cardAction}
+              >
+                <CardMedia className={classes.media} component="img" image={SAP} />
+                <CardContent className={classes.cardContent}>
+                  <Typography variant="h6">API Demo Client</Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
         </Grid>
         <Box m={3} className={classes.centered}>
           <Button variant="contained" color="secondary" onClick={() => this.router.navigateToHome()}>

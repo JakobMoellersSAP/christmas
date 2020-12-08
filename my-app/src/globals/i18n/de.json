@@ -12,6 +12,6 @@
   "ReadMore": "Mehr erfahren",
   "BackToHome": "Zurück zum Start",
   "ODataHeader": "API Client",
-  "DescriptionAPI": "Bla bla bla",
+  "DescriptionAPI": "Laden Sie einen aktuellen Fahrzeugbestand aus einem SAP Backendsystem indem Sie auf den Button \"Fahrzeugbestand laden\" klicken. Die SAP Cloud Platform in Verbindung mit dem Daimler MO360-FTK ermöglicht es, Daten aus SAP- und non-SAP-Backends zu laden, egal ob sich diese on-premise oder in der Cloud befinden.",
   "LoadData": "Fahrzeugbestand laden"
 }

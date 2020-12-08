@@ -12,6 +12,6 @@
   "ReadMore": "Read more",
   "BackToHome": "Back to home",
   "ODataHeader": "API Client",
-  "DescriptionAPI": "Bla bla bla",
+  "DescriptionAPI": "Load current vehicle stock information from an SAP backend system by clicking on the button \"Load Car Inventory\". SAP Cloud Platform together with the Daimler MO360-FTK makes it possible to load data from SAP- and non-SAP-backends, no matter whether they are located in the cloud or on-premise.",
   "LoadData": "Load Car Inventory"
 }
