@@ -11,5 +11,7 @@
   "HeadlineDemoContent": "Wichtige Links",
   "ReadMore": "Mehr erfahren",
   "BackToHome": "Zurück zum Start",
-  "ODataHeader": "API Client"
+  "ODataHeader": "API Client",
+  "DescriptionAPI": "Bla bla bla",
+  "LoadData": "Fahrzeugbestand laden"
 }
