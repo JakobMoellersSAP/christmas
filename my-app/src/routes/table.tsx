@@ -28,6 +28,40 @@ import { I18nService, inject, withInject, RouterService } from '@daimler/ftk-cor
 import * as React from 'react';
 import SAP from '../assets/images/sap.png';
 import Daimler from '../assets/images/daimler.png';
+import { DataGrid } from '@material-ui/data-grid';
+
+const columns = [
+  { field: 'id', headerName: 'ID', width: 70 },
+  { field: 'firstName', headerName: 'First name', width: 130 },
+  { field: 'lastName', headerName: 'Last name', width: 130 },
+  {
+    field: 'age',
+    headerName: 'Age',
+    type: 'number',
+    width: 90,
+  },
+  {
+    field: 'fullName',
+    headerName: 'Full name',
+    description: 'This column has a value getter and is not sortable.',
+    sortable: false,
+    width: 160,
+    valueGetter: (params: { getValue: (arg0: string) => any }) =>
+      `${params.getValue('firstName') || ''} ${params.getValue('lastName') || ''}`,
+  },
+];
+
+const rows = [
+  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
+  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
+  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
+  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
+  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
+  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
+  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
+  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
+  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+];
 
 const tableStyles = () =>
   createStyles({
@@ -57,7 +91,7 @@ const tableStyles = () =>
     },
   });
 
-class DemoContent extends React.Component<WithStyles<typeof tableStyles>, {}> {
+class TablePage extends React.Component<WithStyles<typeof tableStyles>, {}> {
   @inject()
   public i18n!: I18nService;
 
@@ -70,38 +104,11 @@ class DemoContent extends React.Component<WithStyles<typeof tableStyles>, {}> {
     return (
       <Container>
         <Typography variant={'h5'} gutterBottom={true} align="center">
-          {this.i18n.translateToString('HeadlineDemoContent')}
+          {this.i18n.translateToString('ODataHeader')}
         </Typography>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
-            <Card className={classes.card}>
-              <CardActionArea
-                href="https://github.com/Daimler/mo360-ftk"
-                target="_blank"
-                className={classes.cardAction}
-              >
-                <CardMedia className={classes.media} component="img" image={Daimler} />
-                <CardContent className={classes.cardContent}>
-                  <Typography variant="h6">Sources @ GitHub</Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Card className={classes.card}>
-              <CardActionArea
-                href="https://www.sap.com/products/cloud-platform.html"
-                target="_blank"
-                className={classes.cardAction}
-              >
-                <CardMedia className={classes.media} component="img" image={SAP} />
-                <CardContent className={classes.cardContent}>
-                  <Typography variant="h6">SAP Cloud Platform</Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-        </Grid>
+        <div style={{ height: 400, width: '100%' }}>
+          <DataGrid rows={rows} columns={columns} pageSize={5} checkboxSelection />
+        </div>
         <Box m={3} className={classes.centered}>
           <Button variant="contained" color="secondary" onClick={() => this.router.navigateToHome()}>
             {this.i18n.translateToString('BackToHome')}
@@ -112,4 +119,4 @@ class DemoContent extends React.Component<WithStyles<typeof tableStyles>, {}> {
   }
 }
 
-export default withStyles(tableStyles, { withTheme: true })(withInject(DemoContent));
+export default withStyles(tableStyles, { withTheme: true })(withInject(TablePage));
