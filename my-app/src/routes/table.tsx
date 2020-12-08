@@ -26,41 +26,32 @@ import {
 } from '@material-ui/core';
 import { I18nService, inject, withInject, RouterService } from '@daimler/ftk-core';
 import * as React from 'react';
-import SAP from '../assets/images/sap.png';
-import Daimler from '../assets/images/daimler.png';
+import SAP from '../assets/imco2s/sap.png';
+import Daimler from '../assets/imco2s/daimler.png';
 import { DataGrid } from '@material-ui/data-grid';
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'firstName', headerName: 'First name', width: 130 },
-  { field: 'lastName', headerName: 'Last name', width: 130 },
+  { field: 'model', headerName: 'Model', width: 130 },
+  { field: 'type', headerName: 'Type', width: 200 },
   {
-    field: 'age',
-    headerName: 'Age',
+    field: 'co2',
+    headerName: 'CO2 Emissions',
     type: 'number',
     width: 90,
-  },
-  {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params: { getValue: (arg0: string) => any }) =>
-      `${params.getValue('firstName') || ''} ${params.getValue('lastName') || ''}`,
   },
 ];
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { id: 1, type: 'C 300 e T-Model', model: 'C-Class', co2: 50 },
+  { id: 2, type: 'E 300 de T-Model', model: 'E-Class', co2: 42 },
+  { id: 3, type: 'S 350 d Sedan', model: 'S-Class', co2: 163 },
+  { id: 4, type: 'C 300 Coupe', model: 'C-Class', co2: 136 },
+  { id: 5, type: 'CLA 250 e Coupe', model: 'CLA-Class', co2: 31 },
+  { id: 6, type: 'CLS 400 d 4MATIC Coupe', model: 'CLS-Class', co2: 162 },
+  { id: 7, type: 'EQC 400', model: 'EQC-Class', co2: 0 },
+  { id: 8, type: 'GLC 300 e 4MATIC', model: 'GLC-Class', co2: 50 },
+  { id: 9, type: 'EQV 300', model: 'EQV-Class', co2: 0 },
 ];
 
 const tableStyles = () =>
@@ -91,7 +82,7 @@ const tableStyles = () =>
     },
   });
 
-class TablePage extends React.Component<WithStyles<typeof tableStyles>, {}> {
+class TablePco2 extends React.Component<WithStyles<typeof tableStyles>, {}> {
   @inject()
   public i18n!: I18nService;
 
@@ -106,8 +97,8 @@ class TablePage extends React.Component<WithStyles<typeof tableStyles>, {}> {
         <Typography variant={'h5'} gutterBottom={true} align="center">
           {this.i18n.translateToString('ODataHeader')}
         </Typography>
-        <div style={{ height: 400, width: '100%' }}>
-          <DataGrid rows={rows} columns={columns} pageSize={5} checkboxSelection />
+        <div style={{ height: 600, width: '100%' }}>
+          <DataGrid rows={rows} columns={columns} pco2Size={5} checkboxSelection />
         </div>
         <Box m={3} className={classes.centered}>
           <Button variant="contained" color="secondary" onClick={() => this.router.navigateToHome()}>
@@ -119,4 +110,4 @@ class TablePage extends React.Component<WithStyles<typeof tableStyles>, {}> {
   }
 }
 
-export default withStyles(tableStyles, { withTheme: true })(withInject(TablePage));
+export default withStyles(tableStyles, { withTheme: true })(withInject(TablePco2));
