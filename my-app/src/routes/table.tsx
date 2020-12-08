@@ -38,18 +38,6 @@ const columns = [
   { field: 'stockamount', headerName: 'Amount in Stock', type: 'number', width: 150 }
 ];
 
-const rows5 = [
-  { id: 1, type: 'C 300 e T-Model', model: 'C-Class', co2: 50, stockamount: 4 },
-  { id: 2, type: 'E 300 de T-Model', model: 'E-Class', co2: 42, stockamount: 6 },
-  { id: 3, type: 'S 350 d Sedan', model: 'S-Class', co2: 163, stockamount: 0 },
-  { id: 4, type: 'C 300 Coupe', model: 'C-Class', co2: 136, stockamount: 2 },
-  { id: 5, type: 'CLA 250 e Coupe', model: 'CLA-Class', co2: 31, stockamount: 10 },
-  { id: 6, type: 'CLS 400 d 4MATIC Coupe', model: 'CLS-Class', co2: 162, stockamount: 1 },
-  { id: 7, type: 'EQC 400', model: 'EQC-Class', co2: 0, stockamount: 2 },
-  { id: 8, type: 'GLC 300 e 4MATIC', model: 'GLC-Class', co2: 50, stockamount: 7 },
-  { id: 9, type: 'EQV 300', model: 'EQV-Class', co2: 0, stockamount: 1 },
-];
-
 const tableStyles = () =>
   createStyles({
     centered: {
@@ -89,45 +77,35 @@ class TablePco2 extends React.Component<WithStyles<typeof tableStyles>, {}> {
     super(props);
 
     this.state = {
-      rows: [
-        { id: 1, type: 'C 300 e T-Model', model: 'C-Class', co2: 50 },
-        { id: 2, type: 'E 300 de T-Model', model: 'E-Class', co2: 42 },
-        { id: 3, type: 'S 350 d Sedan', model: 'S-Class', co2: 163 },
-        { id: 4, type: 'C 300 Coupe', model: 'C-Class', co2: 136 },
-        { id: 5, type: 'CLA 250 e Coupe', model: 'CLA-Class', co2: 31 },
-        { id: 6, type: 'CLS 400 d 4MATIC Coupe', model: 'CLS-Class', co2: 162 },
-        { id: 7, type: 'EQC 400', model: 'EQC-Class', co2: 0 },
-        { id: 8, type: 'GLC 300 e 4MATIC', model: 'GLC-Class', co2: 50 },
-      ],
+      rows: [],
     };
 
   }
 
   loadData = () => {
-    // TODO: possible only once
-    //this.state.rows.concat({ id: 9, type: 'EQV 300', model: 'EQV-Class', co2: 0 });
     this.setState(state => {
       if (state.rows.length < 9) {
-        const rows = state.rows.concat({ id: 9, type: 'EQV 300', model: 'EQV-Class', co2: 0 });
+        const rows = state.rows.concat(
+          { id: 1, type: 'C 300 e T-Model', model: 'C-Class', co2: 50, stockamount: 4 },
+          { id: 2, type: 'E 300 de T-Model', model: 'E-Class', co2: 42, stockamount: 6 },
+          { id: 3, type: 'S 350 d Sedan', model: 'S-Class', co2: 163, stockamount: 0 },
+          { id: 4, type: 'C 300 Coupe', model: 'C-Class', co2: 136, stockamount: 2 },
+          { id: 5, type: 'CLA 250 e Coupe', model: 'CLA-Class', co2: 31, stockamount: 10 },
+          { id: 6, type: 'CLS 400 d 4MATIC Coupe', model: 'CLS-Class', co2: 162, stockamount: 1 },
+          { id: 7, type: 'EQC 400', model: 'EQC-Class', co2: 0, stockamount: 2 },
+          { id: 8, type: 'GLC 300 e 4MATIC', model: 'GLC-Class', co2: 50, stockamount: 7 },
+          { id: 9, type: 'EQV 300', model: 'EQV-Class', co2: 0, stockamount: 1 },
+        );
 
         return {
           rows
         }
       }
     });
-    //);
-    //alert(this.setState({ rows: []}));
-
   };
 
   public render(): JSX.Element {
     const { classes } = this.props;
-
-
-
-    //var rows = ;
-
-
 
     return (
       <Container>
