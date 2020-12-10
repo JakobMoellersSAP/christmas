@@ -13,5 +13,6 @@
   "BackToHome": "Back to home",
   "ODataHeader": "API Client",
   "DescriptionAPI": "Load current vehicle stock information from an SAP backend system by clicking on the button \"Load Car Inventory\". SAP Cloud Platform together with the Daimler MO360-FTK makes it possible to load data from SAP- and non-SAP-backends, no matter whether they are located in the cloud or on-premise.",
-  "LoadData": "Load Car Inventory"
+  "LoadData": "Load Car Inventory",
+  "IntegrationLinks": "SAP Cloud Platform Integration Suite is the strategic integration platform in the SAP Cloud. It contains Integration content for out-of-the-box-integration, open and easily-consumable integration points to non-SAP solutions and an AI-based integration advisor. Learn more about the SAP Cloud Platform Integration Suite in the "
 }

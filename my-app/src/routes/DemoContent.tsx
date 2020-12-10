@@ -28,6 +28,7 @@ import { I18nService, inject, withInject, RouterService } from '@daimler/ftk-cor
 import * as React from 'react';
 import SAP from '../assets/images/sap.png';
 import Daimler from '../assets/images/daimler.png';
+import Integration from '../assets/images/integration.png';
 
 const DemoRouteStyles = () =>
   createStyles({
@@ -107,9 +108,9 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
                 onClick={() => this.router.navigate(this.router.linkTo('table'))}
                 className={classes.cardAction}
               >
-                <CardMedia className={classes.media} component="img" image={SAP} />
+                <CardMedia className={classes.media} component="img" image={Integration} />
                 <CardContent className={classes.cardContent}>
-                  <Typography variant="h6">API Demo Client</Typography>
+                  <Typography variant="h6">Integration Demo</Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
