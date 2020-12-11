@@ -117,7 +117,7 @@ class TablePco2 extends React.Component<WithStyles<typeof tableStyles>, AppState
         <div style={{ height: 600, width: '100%' }}>
           <DataGrid rows={this.state.rows} columns={columns} checkboxSelection />
         </div>
-        <Typography className={classes.centered}>{this.i18n.translate('APIBusinessHub')}<a href="https://api.sap.com/" rel="noreferrer" target="_blank">API Business Hub.</a></Typography>
+        <Typography className={classes.centered}>{this.i18n.translate('APIBusinessHub')}<a href="https://api.sap.com/" rel="noreferrer" target="_blank">SAP API Business Hub.</a></Typography>
         <Typography className={classes.centered}>{this.i18n.translate('IntegrationLinks')}<a href="https://www.sap.com/documents/2020/11/400ae14b-bf7d-0010-87a3-c30de2ffd8ff.html" rel="noreferrer" target="_blank">SAP Integration Architecture Guide for Cloud and Hybrid Landscapes.</a></Typography>
         <Box m={3} className={classes.centered}>
           <Button variant="contained" color="secondary" onClick={() => this.router.navigate(this.router.linkTo('demoContent'))}>

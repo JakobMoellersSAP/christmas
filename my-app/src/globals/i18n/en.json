@@ -8,7 +8,7 @@
   "LanguageShort": "EN",
   "PageTitle": "Merry Christmas and a Happy New Year!",
   "SwitchLanguage": "DE",
-  "HeadlineDemoContent": "Important Links",
+  "HeadlineDemoContent": "Learn more",
   "ReadMore": "Read more",
   "BackToHome": "Back to home",
   "Back": "Back",
@@ -16,5 +16,8 @@
   "DescriptionAPI": "Load current vehicle stock information from an SAP backend system by clicking on the button \"Load Car Inventory\". SAP Cloud Platform together with the Daimler MO360-FTK makes it possible to load data from SAP- and non-SAP-backends, no matter whether they are located in the cloud or on-premise.",
   "LoadData": "Load Car Inventory",
   "APIBusinessHub": "SAP Cloud Platform Integration Suite is the strategic integration platform in the SAP Cloud. It contains Integration content for out-of-the-box-integration, open and easily-consumable integration points to non-SAP solutions and an AI-based integration advisor. SAP provides a central catalog, the SAP API Business Hub, in which APIs of SAP Solutions are documented and can be tried out as well. Here, you can access the ",
-  "IntegrationLinks": " Learn more about the SAP Cloud Platform Integration Suite, the overall SAP Integration Strategy and Architecture in the "
+  "IntegrationLinks": " Learn more about the SAP Cloud Platform Integration Suite, the overall SAP Integration Strategy and Architecture in the ",
+  "DevOpsHeadline": "DevOps Tools",
+  "DevOpsOverview": "SAP Cloud Platform provides services to automate toolchains and build processes. Furthermore, it can be integrated with non-SAP and Open Source tools as well. The toolchain project \"Piper\" is a FOSS project of SAP and contains tools and content for typical SAP DevOps scenarios.",
+  "DemoContentIntro" : "Here, you can learn more about the Daimler MO360-FTK and the SAP Cloud Platform. The design and layout of this app is completely based on Daimler's Open Source Framework (find the link to the source code below). This demo-application is deployed on SAP Cloud Platform. How to integrate such a cloud-based web application to SAP cloud or on-premise systems is shown below as well. Building, testing, and deploying the application is completely automated with open source DevOps tools provided by SAP."
 }

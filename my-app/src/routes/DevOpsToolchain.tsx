@@ -27,6 +27,8 @@ import {
 import { I18nService, inject, withInject, RouterService } from '@daimler/ftk-core';
 import * as React from 'react';
 import SAP from '../assets/images/sap.png';
+import Piper from '../assets/images/piper.png';
+import CI from '../assets/images/ci.png';
 
 const DemoRouteStyles = () =>
   createStyles({
@@ -69,7 +71,10 @@ class DevOpsToolchain extends React.Component<WithStyles<typeof DemoRouteStyles>
     return (
       <Container>
         <Typography variant={'h5'} gutterBottom={true} align="center">
-          {this.i18n.translateToString('HeadlineDemoContent')}
+          {this.i18n.translateToString('DevOpsHeadline')}
+        </Typography>
+        <Typography align="center">
+          {this.i18n.translateToString('DevOpsOverview')}
         </Typography>
         <Grid container spacing={1}>
           <Grid item xs={12} md={6}>
@@ -79,7 +84,7 @@ class DevOpsToolchain extends React.Component<WithStyles<typeof DemoRouteStyles>
                 target="_blank"
                 className={classes.cardAction}
               >
-                <CardMedia className={classes.media} component="img" image={SAP} />
+                <CardMedia className={classes.media} component="img" image={CI} />
                 <CardContent className={classes.cardContent}>
                   <Typography>SAP Cloud Platform CI/CD Service</Typography>
                 </CardContent>
@@ -93,9 +98,9 @@ class DevOpsToolchain extends React.Component<WithStyles<typeof DemoRouteStyles>
                 target="_blank"
                 className={classes.cardAction}
               >
-                <CardMedia className={classes.media} component="img" image={SAP} />
+                <CardMedia className={classes.media} component="img" image={Piper} />
                 <CardContent className={classes.cardContent}>
-                  <Typography>Piper</Typography>
+                  <Typography>SAP Project Piper (FOSS)</Typography>
                 </CardContent>
               </CardActionArea>
             </Card>

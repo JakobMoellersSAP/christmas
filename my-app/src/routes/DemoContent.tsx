@@ -29,6 +29,7 @@ import * as React from 'react';
 import SAP from '../assets/images/sap.png';
 import Daimler from '../assets/images/daimler.png';
 import Integration from '../assets/images/integration.png';
+import CI from '../assets/images/ci.png';
 
 const DemoRouteStyles = () =>
   createStyles({
@@ -72,6 +73,9 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
       <Container>
         <Typography variant={'h5'} gutterBottom={true} align="center">
           {this.i18n.translateToString('HeadlineDemoContent')}
+        </Typography>
+        <Typography align="center">
+          {this.i18n.translateToString('DemoContentIntro')}
         </Typography>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
@@ -121,7 +125,7 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
                 onClick={() => this.router.navigate(this.router.linkTo('devops'))}
                 className={classes.cardAction}
               >
-                <CardMedia className={classes.media} component="img" image={SAP} />
+                <CardMedia className={classes.media} component="img" image={CI} />
                 <CardContent className={classes.cardContent}>
                   <Typography variant="h6">DevOps Tools</Typography>
                 </CardContent>
