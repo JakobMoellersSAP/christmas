@@ -28,7 +28,7 @@ import { DataGrid } from '@material-ui/data-grid';
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
   { field: 'model', headerName: 'Model', width: 130 },
-  { field: 'type', headerName: 'Type', width: 200 },
+  { field: 'type', headerName: 'Type', width: 230 },
   { field: 'co2', headerName: 'CO2 Emissions', type: 'number', width: 150 },
   { field: 'stockamount', headerName: 'Amount in Stock', type: 'number', width: 150 },
 ];
@@ -119,8 +119,8 @@ class TablePco2 extends React.Component<WithStyles<typeof tableStyles>, AppState
         </div>
         <Typography className={classes.centered}>{this.i18n.translate('IntegrationLinks')}<a href="https://www.sap.com/documents/2020/11/400ae14b-bf7d-0010-87a3-c30de2ffd8ff.html" rel="noreferrer" target="_blank">Integration Architecture Guide for Cloud and Hybrid Landscapes.</a></Typography>
         <Box m={3} className={classes.centered}>
-          <Button variant="contained" color="secondary" onClick={() => this.router.navigateToHome()}>
-            {this.i18n.translateToString('BackToHome')}
+          <Button variant="contained" color="secondary" onClick={() => this.router.navigate(this.router.linkTo('demoContent'))}>
+            {this.i18n.translateToString('Back')}
           </Button>
         </Box>
       </Container>
