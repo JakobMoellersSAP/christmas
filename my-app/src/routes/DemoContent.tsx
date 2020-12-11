@@ -121,7 +121,7 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
                 onClick={() => this.router.navigate(this.router.linkTo('devops'))}
                 className={classes.cardAction}
               >
-                <CardMedia className={classes.media} component="img" image={Integration} />
+                <CardMedia className={classes.media} component="img" image={SAP} />
                 <CardContent className={classes.cardContent}>
                   <Typography variant="h6">DevOps Tools</Typography>
                 </CardContent>

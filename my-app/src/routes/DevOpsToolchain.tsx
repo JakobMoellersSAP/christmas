@@ -73,31 +73,17 @@ class DevOpsToolchain extends React.Component<WithStyles<typeof DemoRouteStyles>
         <Typography variant={'h5'} gutterBottom={true} align="center">
           {this.i18n.translateToString('HeadlineDemoContent')}
         </Typography>
-        <Grid container spacing={3}>
+        <Grid container spacing={1}>
           <Grid item xs={12} md={6}>
             <Card className={classes.card}>
               <CardActionArea
-                href="https://github.com/Daimler/mo360-ftk"
-                target="_blank"
-                className={classes.cardAction}
-              >
-                <CardMedia className={classes.media} component="img" image={Daimler} />
-                <CardContent className={classes.cardContent}>
-                  <Typography variant="h6">Daimler MO360 Source Code @ GitHub</Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Card className={classes.card}>
-              <CardActionArea
-                href="https://www.sap.com/products/cloud-platform.html"
+                href="https://discovery-center.cloud.sap/serviceCatalog/continuous-integration-&-delivery"
                 target="_blank"
                 className={classes.cardAction}
               >
                 <CardMedia className={classes.media} component="img" image={SAP} />
                 <CardContent className={classes.cardContent}>
-                  <Typography variant="h6">SAP Cloud Platform</Typography>
+                  <Typography>SAP Cloud Platform CI/CD Service</Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
@@ -105,20 +91,35 @@ class DevOpsToolchain extends React.Component<WithStyles<typeof DemoRouteStyles>
           <Grid item xs={12} md={6}>
             <Card className={classes.card}>
               <CardActionArea
-                onClick={() => this.router.navigate(this.router.linkTo('table'))}
+                href="https://sap.github.io/jenkins-library/"
+                target="_blank"
                 className={classes.cardAction}
               >
-                <CardMedia className={classes.media} component="img" image={Integration} />
+                <CardMedia className={classes.media} component="img" image={SAP} />
                 <CardContent className={classes.cardContent}>
-                  <Typography variant="h6">Integration Demo</Typography>
+                  <Typography>Piper</Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Card className={classes.card}>
+              <CardActionArea
+                href="https://help.sap.com/viewer/8cacec64ed854b2a88e9a0973e0f97a2/Cloud/en-US/e9fa320181124fa9808d4446a1bf69dd.html"
+                target="_blank"
+                className={classes.cardAction}
+              >
+                <CardMedia className={classes.media} component="img" image={SAP} />
+                <CardContent className={classes.cardContent}>
+                  <Typography>SAP Solutions for Continuous Integration and Delivery</Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
           </Grid>
         </Grid>
         <Box m={3} className={classes.centered}>
-          <Button variant="contained" color="secondary" onClick={() => this.router.navigateToHome()}>
-            {this.i18n.translateToString('BackToHome')}
+          <Button variant="contained" color="secondary" onClick={() => this.router.navigate(this.router.linkTo('demoContent'))}>
+            {this.i18n.translateToString('Back')}
           </Button>
         </Box>
       </Container>
