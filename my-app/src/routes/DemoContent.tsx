@@ -83,7 +83,7 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
               >
                 <CardMedia className={classes.media} component="img" image={Daimler} />
                 <CardContent className={classes.cardContent}>
-                  <Typography variant="h6">Sources @ GitHub</Typography>
+                  <Typography variant="h6">Daimler MO360 Source Code @ GitHub</Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
