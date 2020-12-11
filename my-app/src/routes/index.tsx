@@ -4,12 +4,14 @@
 import withLayout from '../decorators/withLayout';
 import DemoContent from './DemoContent';
 import Home from './Home';
+import devops from './DevOpsToolchain';
 import table from './table';
 import { IRouteConfig } from '@daimler/ftk-core';
 
 const LayoutHome = withLayout(Home);
 const LayoutDemoContent = withLayout(DemoContent);
 const Layouttable = withLayout(table);
+const Layoutdevops = withLayout(devops);
 
 const routes: IRouteConfig[] = [
   {
@@ -26,6 +28,11 @@ const routes: IRouteConfig[] = [
     component: Layouttable,
     name: 'table',
     pattern: '/table',
+  },
+  {
+    component: Layoutdevops,
+    name: 'devops',
+    pattern: '/DevOpsToolchain',
   },
 ];
 

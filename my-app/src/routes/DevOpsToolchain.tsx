@@ -58,7 +58,7 @@ const DemoRouteStyles = () =>
     },
   });
 
-class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}> {
+class DevOpsToolchain extends React.Component<WithStyles<typeof DemoRouteStyles>, {}> {
   @inject()
   public i18n!: I18nService;
 
@@ -115,19 +115,6 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
               </CardActionArea>
             </Card>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Card className={classes.card}>
-              <CardActionArea
-                onClick={() => this.router.navigate(this.router.linkTo('devops'))}
-                className={classes.cardAction}
-              >
-                <CardMedia className={classes.media} component="img" image={Integration} />
-                <CardContent className={classes.cardContent}>
-                  <Typography variant="h6">DevOps Tools</Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
         </Grid>
         <Box m={3} className={classes.centered}>
           <Button variant="contained" color="secondary" onClick={() => this.router.navigateToHome()}>
@@ -139,4 +126,4 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
   }
 }
 
-export default withStyles(DemoRouteStyles, { withTheme: true })(withInject(DemoContent));
+export default withStyles(DemoRouteStyles, { withTheme: true })(withInject(DevOpsToolchain));
