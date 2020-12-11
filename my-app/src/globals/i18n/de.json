@@ -15,5 +15,6 @@
   "ODataHeader": "API Client",
   "DescriptionAPI": "Laden Sie einen aktuellen Fahrzeugbestand aus einem SAP Backendsystem indem Sie auf den Button \"Fahrzeugbestand laden\" klicken. Die SAP Cloud Platform in Verbindung mit dem Daimler MO360-FTK ermöglicht es, Daten aus SAP- und non-SAP-Backends zu laden, egal ob sich diese on-premise oder in der Cloud befinden.",
   "LoadData": "Fahrzeugbestand laden",
-  "IntegrationLinks": "Die SAP Cloud Platform Integration Suite ist die strategische Integrationsplattform in der SAP Cloud. Sie umfasst Integrationscontent für \"Out-of-the-box-Integration\", offene und leicht konsumierbare Integrationswege zu non-SAP-Lösungen sowie eine auf künstlicher Intelligenz basierender Integrationsunterstützung. Erfahren Sie mehr über die SAP Cloud Platform Integration Suite im "
+  "APIBusinessHub": "Die SAP Cloud Platform Integration Suite ist die strategische Integrationsplattform in der SAP Cloud. Sie umfasst Integrationscontent für \"Out-of-the-box-Integration\", offene und leicht konsumierbare Integrationswege zu non-SAP-Lösungen sowie eine auf künstlicher Intelligenz basierender Integrationsunterstützung. SAP stellt einen zentralen Katalog, den API Business Hub, bereit, in welchem die APIs der SAP Lösungen dokumentiert und direkt zum Ausprobieren bereitstehen. Hier kommen Sie zum ",
+  "IntegrationLinks": "Erfahren Sie mehr über die SAP Cloud Platform Integration Suite, die übergreifende SAP Integrationsstrategie und -architektur im "
 }
