@@ -27,8 +27,6 @@ import {
 import { I18nService, inject, withInject, RouterService } from '@daimler/ftk-core';
 import * as React from 'react';
 import SAP from '../assets/images/sap.png';
-import Daimler from '../assets/images/daimler.png';
-import Integration from '../assets/images/integration.png';
 
 const DemoRouteStyles = () =>
   createStyles({
