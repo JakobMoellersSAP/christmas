@@ -108,13 +108,13 @@ class DevOpsToolchain extends React.Component<WithStyles<typeof DemoRouteStyles>
           <Grid item xs={12} md={6}>
             <Card className={classes.card}>
               <CardActionArea
-                href="https://help.sap.com/viewer/8cacec64ed854b2a88e9a0973e0f97a2/Cloud/en-US/e9fa320181124fa9808d4446a1bf69dd.html"
+                href="https://help.sap.com/viewer/product/CICD_OVERVIEW/Cloud/en-US?task=discover_task"
                 target="_blank"
                 className={classes.cardAction}
               >
                 <CardMedia className={classes.media} component="img" image={SAP} />
                 <CardContent className={classes.cardContent}>
-                  <Typography>SAP Solutions for Continuous Integration and Delivery</Typography>
+                  <Typography>Continuous Integration and Delivery by SAP</Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
