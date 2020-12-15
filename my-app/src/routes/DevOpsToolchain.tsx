@@ -73,9 +73,7 @@ class DevOpsToolchain extends React.Component<WithStyles<typeof DemoRouteStyles>
         <Typography variant={'h5'} gutterBottom={true} align="center">
           {this.i18n.translateToString('DevOpsHeadline')}
         </Typography>
-        <Typography align="center">
-          {this.i18n.translateToString('DevOpsOverview')}
-        </Typography>
+        <Typography align="center">{this.i18n.translateToString('DevOpsOverview')}</Typography>
         <Grid container spacing={1}>
           <Grid item xs={12} md={6}>
             <Card className={classes.card}>
@@ -121,7 +119,11 @@ class DevOpsToolchain extends React.Component<WithStyles<typeof DemoRouteStyles>
           </Grid>
         </Grid>
         <Box m={3} className={classes.centered}>
-          <Button variant="contained" color="secondary" onClick={() => this.router.navigate(this.router.linkTo('demoContent'))}>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => this.router.navigate(this.router.linkTo('demoContent'))}
+          >
             {this.i18n.translateToString('Back')}
           </Button>
         </Box>

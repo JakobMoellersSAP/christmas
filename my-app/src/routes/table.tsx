@@ -10,15 +10,7 @@
  * use the hook-based react style.
  */
 
-import {
-  createStyles,
-  withStyles,
-  WithStyles,
-  Container,
-  Typography,
-  Box,
-  Button
-} from '@material-ui/core';
+import { createStyles, withStyles, WithStyles, Container, Typography, Box, Button } from '@material-ui/core';
 import { I18nService, inject, withInject, RouterService } from '@daimler/ftk-core';
 import * as React from 'react';
 //import SAP from '../assets/imco2s/sap.png';
@@ -62,11 +54,11 @@ const tableStyles = () =>
   });
 
 //interface AppProps {
-   //code related to your props goes here
+//code related to your props goes here
 //}
 
 interface AppState {
-   rows: any []
+  rows: any[];
 }
 
 class TablePco2 extends React.Component<WithStyles<typeof tableStyles>, AppState> {
@@ -85,7 +77,7 @@ class TablePco2 extends React.Component<WithStyles<typeof tableStyles>, AppState
   }
 
   loadData = () => {
-    let rows = [] as any[]
+    let rows = [] as any[];
     if (this.state.rows.length < 9) {
       rows = [
         { id: 1, type: 'C 300 e T-Model', model: 'C-Class', co2: 50, stockamount: 4 },
@@ -97,8 +89,8 @@ class TablePco2 extends React.Component<WithStyles<typeof tableStyles>, AppState
         { id: 7, type: 'EQC 400', model: 'EQC-Class', co2: 0, stockamount: 2 },
         { id: 8, type: 'GLC 300 e 4MATIC', model: 'GLC-Class', co2: 50, stockamount: 7 },
         { id: 9, type: 'EQV 300', model: 'EQV-Class', co2: 0, stockamount: 1 },
-      ]
-      this.setState({ rows })
+      ];
+      this.setState({ rows });
     }
   };
 
@@ -117,10 +109,28 @@ class TablePco2 extends React.Component<WithStyles<typeof tableStyles>, AppState
         <div style={{ height: 600, width: '100%' }}>
           <DataGrid rows={this.state.rows} columns={columns} checkboxSelection />
         </div>
-        <Typography className={classes.centered}>{this.i18n.translate('APIBusinessHub')}<a href="https://api.sap.com/" rel="noreferrer" target="_blank">SAP API Business Hub.</a></Typography>
-        <Typography className={classes.centered}>{this.i18n.translate('IntegrationLinks')}<a href="https://www.sap.com/documents/2020/11/400ae14b-bf7d-0010-87a3-c30de2ffd8ff.html" rel="noreferrer" target="_blank">SAP Integration Architecture Guide for Cloud and Hybrid Landscapes.</a></Typography>
+        <Typography className={classes.centered}>
+          {this.i18n.translate('APIBusinessHub')}
+          <a href="https://api.sap.com/" rel="noreferrer" target="_blank">
+            SAP API Business Hub.
+          </a>
+        </Typography>
+        <Typography className={classes.centered}>
+          {this.i18n.translate('IntegrationLinks')}
+          <a
+            href="https://www.sap.com/documents/2020/11/400ae14b-bf7d-0010-87a3-c30de2ffd8ff.html"
+            rel="noreferrer"
+            target="_blank"
+          >
+            SAP Integration Architecture Guide for Cloud and Hybrid Landscapes.
+          </a>
+        </Typography>
         <Box m={3} className={classes.centered}>
-          <Button variant="contained" color="secondary" onClick={() => this.router.navigate(this.router.linkTo('demoContent'))}>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => this.router.navigate(this.router.linkTo('demoContent'))}
+          >
             {this.i18n.translateToString('Back')}
           </Button>
         </Box>
