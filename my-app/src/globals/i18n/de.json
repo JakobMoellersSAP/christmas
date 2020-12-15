@@ -9,7 +9,7 @@
   "PageTitle": "Frohe Weihnachten und einen guten Rutsch ins neue Jahr!",
   "SwitchLanguage": "EN",
   "HeadlineDemoContent": "Über diese Web-App",
-  "ReadMore": "Mehr erfahren",
+  "ReadMore": "Details zur App",
   "BackToHome": "Zurück zum Start",
   "Back": "Zurück",
   "ODataHeader": "API Demo Client",
@@ -18,6 +18,6 @@
   "APIBusinessHub": "Die SAP Cloud Platform Integration Suite ist die strategische Integrationsplattform in der SAP Cloud. Sie umfasst Integrationscontent für \"Out-of-the-box-Integration\", offene und leicht konsumierbare Integrationswege zu non-SAP-Lösungen sowie eine auf künstlicher Intelligenz basierender Integrationsunterstützung. SAP stellt einen zentralen Katalog, den API Business Hub, bereit, in welchem die APIs der SAP Lösungen dokumentiert und direkt zum Ausprobieren bereitstehen. Hier kommen Sie zum ",
   "IntegrationLinks": "Erfahren Sie mehr über die SAP Cloud Platform Integration Suite, die übergreifende SAP Integrationsstrategie und -architektur im ",
   "DevOpsHeadline": "DevOps Tools",
-  "DevOpsOverview": "SAP Cloud Platform stellt Services zum Automatisieren von Toolchains bereit und kann darüber hinaus auch mit etablierten Tools integiert werden. Das SAP Toolchain-Projekt Piper ist ein Open Source Projekt der SAP und umfasst Tools und Content für typische SAP DevOps Szenarien.",
-  "DemoContentIntro" : "Hier können Sie sich einen Eindruck vom Daimler MO360-FTK und der SAP Cloud Platform verschaffen. Das Design und Layout dieser Web-Applikation basiert vollständig auf Daimlers Open Source Framework (Den Link zum Sourcecode finden Sie unten). Deployed ist diese Demo-App auf der SAP Cloud Platfrom. Wie man so eine Applikation in SAP Cloud oder On-Premise Systeme integrieren kann zeigen wir Ihnen ebenfalls. Das Bauen, Testen und Deployen der App ist mittels DevOps-Tools automatisiert."
+  "DevOpsOverview": "SAP Cloud Platform stellt Services zum Automatisieren von Toolchains bereit und kann darüber hinaus auch mit etablierten DevOps Tools integriert werden. Das SAP Toolchain-Projekt Piper ist ein Open Source Projekt der SAP und umfasst Tools und Content für typische SAP DevOps Szenarien.",
+  "DemoContentIntro" : "Hier können Sie sich einen Eindruck vom Daimler MO360-FTK und der SAP Cloud Platform verschaffen. Das Design und Layout dieser cloud-native Web-Applikation basiert vollständig auf Daimlers Open Source Framework (Den Link zum Sourcecode finden Sie unten). Deployed ist diese Demo-App auf der SAP Cloud Platfrom. Wie man so eine Applikation mit SAP Cloud oder On-Premise Systeme integrieren kann zeigen wir Ihnen ebenfalls. Das Bauen, Testen und Deployen der App ist mittels DevOps-Tools automatisiert."
 }
