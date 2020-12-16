@@ -83,13 +83,17 @@ class DevOpsToolchain extends React.Component<WithStyles<typeof DemoRouteStyles>
             <img src={BAS} width="100%" alt="SAP Business Application Studio"></img>
           </Grid>
           <Grid item xs={12} md={10}>
-            <figcaption><Typography align="center">{this.i18n.translateToString('Picture1')}</Typography></figcaption>
+            <figcaption>
+              <Typography align="center">{this.i18n.translateToString('Picture1')}</Typography>
+            </figcaption>
           </Grid>
           <Grid item xs={12} md={10}>
             <img src={Cockpit} width="100%" alt="SAP Cloud Platform Cockpit"></img>
           </Grid>
           <Grid item xs={12} md={10}>
-            <figcaption><Typography align="center">{this.i18n.translateToString('Picture2')}</Typography></figcaption>
+            <figcaption>
+              <Typography align="center">{this.i18n.translateToString('Picture2')}</Typography>
+            </figcaption>
           </Grid>
           <Grid item xs={12} md={10}>
             <Typography align="center">{this.i18n.translateToString('DevOpsMoreInfo')}</Typography>
