@@ -74,7 +74,11 @@ class DemoContent extends React.Component<WithStyles<typeof DemoRouteStyles>, {}
         <Typography variant={'h5'} gutterBottom={true} align="center">
           {this.i18n.translateToString('HeadlineDemoContent')}
         </Typography>
-        <Typography align="center">{this.i18n.translateToString('DemoContentIntro')}</Typography>
+        <Grid container direction="column" justify="flex-start" alignItems="center" spacing={1}>
+          <Grid item xs={12} md={10}>
+            <Typography align="center">{this.i18n.translateToString('DemoContentIntro')}</Typography>
+          </Grid>
+        </Grid>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
             <Card className={classes.card}>
