@@ -29,6 +29,8 @@ import * as React from 'react';
 import SAP from '../assets/images/sap.png';
 import Piper from '../assets/images/piper.png';
 import CI from '../assets/images/ci.png';
+import Cockpit from '../assets/images/cockpit.png';
+import BAS from '../assets/images/bas.png';
 
 const DemoRouteStyles = () =>
   createStyles({
@@ -73,7 +75,23 @@ class DevOpsToolchain extends React.Component<WithStyles<typeof DemoRouteStyles>
         <Typography variant={'h5'} gutterBottom={true} align="center">
           {this.i18n.translateToString('DevOpsHeadline')}
         </Typography>
-        <Typography align="center">{this.i18n.translateToString('DevOpsOverview')}</Typography>
+        <Grid container direction="column" justify="flex-start" alignItems="center" spacing={1}>
+          <Grid item xs={12} md={10}>
+            <Typography align="center">{this.i18n.translateToString('DevOpsOverview')}</Typography>
+          </Grid>
+          <Grid item xs={12} md={10}>
+            <img src={BAS} width="100%" alt="SAP Business Application Studio"></img>
+          </Grid>
+          <Grid item xs={12} md={10}>
+            <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+          </Grid>
+          <Grid item xs={12} md={10}>
+            <img src={Cockpit} width="100%" alt="SAP Cloud Platform Cockpit"></img>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+          </Grid>
+        </Grid>
         <Grid container spacing={1}>
           <Grid item xs={12} md={6}>
             <Card className={classes.card}>
